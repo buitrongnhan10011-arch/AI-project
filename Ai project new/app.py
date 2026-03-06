@@ -127,10 +127,10 @@ def chatbot_response(text):
     elif pattern_img_tuan.search(text_no_accent):
         return """
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <img src="/static/tuan1.png" width="150">
+            <img src="/static/tuan1.jpg" width="150">
             <img src="/static/tuan2.png" width="150">
             <img src="/static/tuan3.png" width="150">
-            <img src="/static/tuan4.jpg" width="150">
+            <img src="/static/tuan4.png" width="150">
         </div>
         """
 
@@ -138,9 +138,9 @@ def chatbot_response(text):
     elif pattern_img_beo.search(text_no_accent):
         return """
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <img src="/static/beo1.jpg" width="150">
+            <img src="/static/beo1.png" width="150">
             <img src="/static/beo2.jpg" width="150">
-            <img src="/static/beo3.png" width="150">
+            <img src="/static/beo3.jpg" width="150">
         </div>
         """
 
@@ -148,10 +148,10 @@ def chatbot_response(text):
     elif pattern_img_hoang.search(text_no_accent):
         return """
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <img src="/static/hoang1.jpg" width="150">
-            <img src="/static/hoang2.jpg" width="150">
+            <img src="/static/hoang1.png" width="150">
+            <img src="/static/hoang2.png" width="150">
             <img src="/static/hoang3.jpg" width="150">
-            <img src="/static/hoang4.png" width="150">
+            <img src="/static/hoang4.jpg" width="150">
         </div>
         """
 
@@ -368,4 +368,5 @@ def chat():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
+
     app.run(host="0.0.0.0", port=port)
